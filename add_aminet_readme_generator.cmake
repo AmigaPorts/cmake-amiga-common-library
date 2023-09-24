@@ -34,6 +34,6 @@ function(add_aminet_readme_generator TARGET_NAME OUTPUT_NAME)
 	add_custom_target(aminet_readme DEPENDS ${PROJECT_BINARY_DIR}/${OUTPUT_NAME})
 	add_dependencies(${TARGET_NAME} aminet_readme)
 
-	install(FILES ${PROJECT_BINARY_DIR}/aminet.readme DESTINATION ./${OUTPUT_NAME})
+	install(FILES ${PROJECT_BINARY_DIR}/${OUTPUT_NAME} DESTINATION docs)
 
 endfunction(add_aminet_readme_generator)
