@@ -1,4 +1,4 @@
-# Copyright © 2023 Marlon Beijer <marlon@amigadev.com>
+# Copyright © 2023-2025 Marlon Beijer <marlon@amigadev.com>
 # https://github.com/mbeijer
 #
 # This Source Code Form is subject to the terms of the
@@ -9,3 +9,4 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
 include(get_verstring)
 include(add_project_info)
 include(add_aminet_readme_generator)
+include(sfdc)
