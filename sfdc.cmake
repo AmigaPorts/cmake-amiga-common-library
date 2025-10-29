@@ -11,10 +11,10 @@ function(sfdc SFD_FILE)
     string(REGEX REPLACE "_lib$" "" LIB_NAME ${LIB_NAME_FULL})
 
     # Create the necessary directories
-    make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/clib)
-    make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/pragmas)
-    make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/proto)
-    make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/inline)
+    file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/clib)
+    file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/pragmas)
+    file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/proto)
+    file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/inline)
 
     add_custom_command(
         OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/include/clib/${LIB_NAME}_protos.h
