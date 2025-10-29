@@ -1,11 +1,9 @@
-# Copyright © 2023 Marlon Beijer <marlon@amigadev.com>
+# Copyright © 2023-2025 Marlon Beijer <marlon@amigadev.com>
 # https://github.com/mbeijer
 #
 # This Source Code Form is subject to the terms of the
 # Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed
 # with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-set(AMINET_FUNCTIONS_DIR "${CMAKE_CURRENT_LIST_DIR}")
 
 function(add_aminet_readme_generator TARGET_NAME OUTPUT_NAME)
 	find_package(Git)
@@ -24,7 +22,7 @@ function(add_aminet_readme_generator TARGET_NAME OUTPUT_NAME)
 		-DTYPE=${AMINET_TYPE}
 		-DARCH=${AMINET_ARCH}
 		-DUPLOADER=${AMINET_UPLOADER}
-		-P "${AMINET_FUNCTIONS_DIR}/generate_aminet_readme.cmake"
+		-P "${CMAKE_CURRENT_FUNCTION_LIST_DIR}/generate_aminet_readme.cmake"
 		COMMENT "Generating Aminet readme file..."
 		WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 		DEPENDS "${PROJECT_SOURCE_DIR}/README.md"
