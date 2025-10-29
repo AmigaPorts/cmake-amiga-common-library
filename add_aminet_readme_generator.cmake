@@ -22,6 +22,7 @@ function(add_aminet_readme_generator TARGET_NAME OUTPUT_NAME)
 		-DTYPE=${AMINET_TYPE}
 		-DARCH=${AMINET_ARCH}
 		-DUPLOADER=${AMINET_UPLOADER}
+		-DPROJECT_VERSION=${PROJECT_VERSION}
 		-P "${CMAKE_CURRENT_FUNCTION_LIST_DIR}/generate_aminet_readme.cmake"
 		COMMENT "Generating Aminet readme file..."
 		WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
